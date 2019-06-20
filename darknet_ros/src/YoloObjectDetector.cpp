@@ -615,6 +615,8 @@ void *YoloObjectDetector::publishInThread()
           boundingBox.ymin = ymin;
           boundingBox.xmax = xmax;
           boundingBox.ymax = ymax;
+          boundingBox.xcenter = (xmin + xmax)/2;
+          boundingBox.ycenter = (ymin + ymax)/2;
           boundingBoxesResults_.bounding_boxes.push_back(boundingBox);
         }
       }
